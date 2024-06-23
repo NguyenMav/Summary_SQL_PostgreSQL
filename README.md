@@ -38,4 +38,3 @@
 
 ![image](https://github.com/NguyenMav/Summary_SQL_PostgreSQL/assets/149219810/a9fdc13d-b8e1-4858-b594-0bb78c0d339b)
 
-# PostgreSQL Keywords Explanations (To Be Added)
