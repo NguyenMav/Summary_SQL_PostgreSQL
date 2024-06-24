@@ -20,21 +20,149 @@
 # Complete PostgreSQL Keyword Explanations
 
 ## SQL Keywords and Functions Index
-
+- [Data Types](#sql-data-types)
 - [Data Query Language (DQL) Keywords](#data-query-language-dql-keywords)
+  - [SELECT](#select)
+  - [FROM](#from)
+  - [WHERE](#where)
+  - [GROUP BY](#group-by)
+  - [HAVING](#having)
+  - [ORDER BY](#order-by)
+  - [JOIN](#join)
+  - [UNION](#union)
+  - [UNION ALL](#union-all)
+  - [INTERSECT](#intersect)
+  - [INTERSECT ALL](#intersect-all)
+  - [LIMIT](#limit)
+  - [OFFSET](#offset)
+  - [DISTINCT](#distinct)
 - [Data Manipulation Language (DML) Keywords](#data-manipulation-language-dml-keywords)
+  - [INSERT](#insert)
+  - [UPDATE](#update)
+  - [DELETE](#delete)
+  - [MERGE](#merge)
+  - [CALL](#call)
+  - [EXPLAIN PLAN](#explain-plan)
+  - [LOCK TABLE](#lock-table)
+  - [VALUES](#values)
+  - [SET](#set)
 - [Data Definition Language (DDL) Keywords](#data-definition-language-ddl-keywords)
+  - [CREATE](#create)
+  - [ALTER](#alter)
+  - [DROP](#drop)
+  - [TRUNCATE](#truncate)
+  - [COMMENT](#comment)
+  - [RENAME](#rename)
+  - [ADD](#add)
+  - [CONSTRAINT](#constraint)
+  - [INDEX](#index)
+  - [PRIMARY KEY](#primary-key)
+  - [FOREIGN KEY](#foreign-key)
 - [Data Control Language (DCL) Keywords](#data-control-language-dcl-keywords)
+  - [GRANT](#grant)
+  - [REVOKE](#revoke)
 - [Transaction Control Language (TCL) Keywords](#transaction-control-language-tcl-keywords)
+  - [COMMIT](#commit)
+  - [ROLLBACK](#rollback)
+  - [SAVEPOINT](#savepoint)
+  - [SET TRANSACTION](#set-transaction)
 - [JOIN Keywords](#join-keywords)
+  - [INNER JOIN](#inner-join)
+  - [LEFT JOIN](#left-join)
+  - [RIGHT JOIN](#right-join)
+  - [FULL JOIN](#full-join)
+  - [CROSS JOIN](#cross-join)
+  - [SELF JOIN](#self-join)
 - [Aggregation Functions](#aggregation-functions)
+  - [SUM](#sum)
+  - [AVG](#avg)
+  - [COUNT](#count)
+  - [MIN](#min)
+  - [MAX](#max)
 - [Window Functions](#window-functions)
+  - [ROW_NUMBER](#row_number)
+  - [RANK](#rank)
+  - [DENSE_RANK](#dense_rank)
+  - [NTILE](#ntile)
+  - [LAG](#lag)
+  - [LEAD](#lead)
+  - [FIRST_VALUE](#first_value)
+  - [LAST_VALUE](#last_value)
+  - [NTH_VALUE](#nth_value)
 - [Numeric Functions](#numeric-functions)
+  - [ABS](#abs)
+  - [CEIL](#ceil)
+  - [FLOOR](#floor)
+  - [ROUND](#round)
+  - [POWER](#power)
+  - [SQRT](#sqrt)
+  - [MOD](#mod)
 - [Null Handling Functions](#null-handling-functions)
+  - [COALESCE](#coalesce)
+  - [NULLIF](#nullif)
+  - [IS NULL](#is-null)
+  - [IS NOT NULL](#is-not-null)
 - [String Functions](#string-functions)
+  - [UPPER](#upper)
+  - [LOWER](#lower)
+  - [INITCAP](#initcap)
+  - [CONCAT](#concat)
+  - [SUBSTRING](#substring)
+  - [LENGTH](#length)
+  - [TRIM](#trim)
+  - [REPLACE](#replace)
 - [Wildcard Characters](#wildcard-characters)
+  - [% (Percent Sign)](#%)
+  - [_ (Underscore)](#_)
 - [Views](#views)
+  - [CREATE VIEW](#create-view)
+  - [ALTER VIEW](#alter-view)
+  - [DROP VIEW](#drop-view)
+  - [CREATE OR REPLACE VIEW](#create-or-replace-view)
 - [PostgreSQL-Specific Keywords](#postgresql-specific-keywords)
+  - [DO](#do)
+  - [ILIKE](#ilike)
+  - [PERFORM](#perform)
+  - [SERIAL](#serial)
+  - [UNLISTEN](#unlisten)
+  - [VACUUM](#vacuum)
+  - [RETURNING](#returning)
+  - [ARRAY](#array)
+  - [ANY and ALL](#any-and-all)
+  - [pg_catalog](#pg_catalog)
+  - [information_schema](#information_schema)
+  - [pg_views](#pg_views)
+  - [pg_tables](#pg_tables)
+  - [pg_datatype](#pg_datatype)
+
+### SQL Data Types
+
+This table provides an overview of common SQL data types along with their descriptions. Adjust the data types and descriptions as per your specific SQL dialect and requirements.
+
+| Data Type              | Description                                               |
+|------------------------|-----------------------------------------------------------|
+| `INT` or `INTEGER`     | Integer values, typically 32-bit signed integer in SQL.   |
+| `SMALLINT`             | Small integer values, typically 16-bit signed integer.     |
+| `BIGINT`               | Large integer values, typically 64-bit signed integer.     |
+| `NUMERIC(precision, scale)` | Fixed-point number with specified precision and scale.  |
+| `DECIMAL(precision, scale)` | Same as `NUMERIC`, with exact precision and scale.      |
+| `FLOAT(p)` or `REAL`   | Floating-point number with specified precision.            |
+| `DOUBLE PRECISION`     | Double precision floating-point number.                    |
+| `CHAR(n)`              | Fixed-length character string with defined length `n`.     |
+| `VARCHAR(n)` or `CHARACTER VARYING(n)` | Variable-length character string with maximum length `n`. |
+| `TEXT`                 | Variable-length character string with no limit.            |
+| `DATE`                 | Date value in YYYY-MM-DD format.                           |
+| `TIME`                 | Time value in HH:MM:SS format.                             |
+| `TIMESTAMP`            | Date and time value.                                       |
+| `BOOLEAN`              | Boolean value (`TRUE` or `FALSE`).                         |
+| `BINARY`               | Fixed-length binary string.                                |
+| `VARBINARY`            | Variable-length binary string.                             |
+| `BYTEA`                | Binary data (PostgreSQL).                                  |
+| `ARRAY`                | Array of elements (PostgreSQL, MySQL).                     |
+| `JSON`                 | JSON (JavaScript Object Notation) data (PostgreSQL, MySQL).|
+| `UUID`                 | Universally unique identifier (PostgreSQL).                |
+| `XML`                  | XML data type (SQL Server, PostgreSQL).                    |
+| `GEOMETRY`             | Spatial data type (MySQL, PostgreSQL).                     |
 
 ### Data Query Language (DQL) Keywords
 
